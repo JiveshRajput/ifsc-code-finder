@@ -1,0 +1,143 @@
+#aboutIfscSection {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.detailSectionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--prColor);
+    margin: 20px 0px 20px 0px;
+}
+
+.detailSectionLeftContainer {
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+
+}
+
+.detailSectionLeftContainer img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.detailRightSectionContainer {
+    flex: 7 7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detailRightSectionContainer h1 {
+    text-align: left;
+}
+
+.detailRightSectionContainer p {
+    color: var(--blackColor);
+}
+
+.aboutFullWidthPageContainer {
+    width: 100%;
+    background-color: var(--thirdColor);
+}
+
+#bankDataInfoSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bankDataInfoContainer {
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 180px;
+    text-align: center;
+    background-color: var(--whiteColor);
+}
+
+.bankDataInfoContainer:hover {
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.160);
+    transition: all 0.1s ease-in;
+    transform: scale(1.05);
+}
+
+.bankDataInfoContainer h2 {
+    font-size: var(--titleHeadingSize);
+    color: var(--prColor);
+}
+
+.bankDataInfoContainer p {
+    color: var(--secColor);
+    font-weight: 500;
+}
+
+#ourMissionSectionLeftContainer {
+    order: 2;
+}
+
+#ourMissionSectionRightContainer {
+    order: 1;
+}
+
+#ourMissionSectionRightContainer p,
+#ourMissionSectionRightContainer h1 {
+    text-align: right;
+}
+
+@media screen and (max-width: 830px) {
+    .bankDataInfoContainer {
+        flex: 1 1 35%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .detailSectionLeftContainer {
+        flex: 1 1 100%;
+    }
+
+    .detailSectionLeftContainer img {
+        width: 150px;
+        height: 150px;
+        aspect-ratio: 1/1;
+    }
+
+    .detailRightSectionContainer,
+    .detailRightSectionContainer h1,
+    #ourMissionSectionRightContainer h1,
+    #ourMissionSectionRightContainer p {
+        text-align: center;
+    }
+
+    #ourMissionSectionLeftContainer {
+        order: 1;
+    }
+
+    #ourMissionSectionRightContainer {
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bankDataInfoContainer {
+        flex: 1 1 100%;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    #bankDetailSearchContainer {
+        padding: 20px 10px
+    }
+
+    #bankDetailSearchContainer h1 {
+        font-size: 28px;
+    }
+
+    #bankDetailSearchContainer h1 span::after {
+        height: 3px;
+        left: -3px;
+    }
+}

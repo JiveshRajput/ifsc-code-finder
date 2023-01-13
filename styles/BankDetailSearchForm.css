@@ -1,0 +1,220 @@
+#bankDetailSearchContainer {
+    width: inherit;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--whiteColor);
+    box-shadow: 1px 1px 30px 3px rgba(0, 0, 0, 0.160);
+}
+
+#bankDetailSearchContainer h1 {
+    margin: 0 0 30px 0;
+    color: var(--prColor);
+    text-align: center;
+    font-size: var(--titleHeadingSize);
+}
+
+#bankDetailSearchContainer h1 span {
+    color: var(--secColor);
+    position: relative;
+}
+
+#bankDetailSearchContainer h1 span::after {
+    content: '';
+    background-color: var(--secColor);
+    position: absolute;
+    bottom: 0px;
+    left: -4px;
+    width: 110%;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.bankDetailSelectOuterContainer {
+    width: 100%;
+    position: relative;
+    user-select: none;
+}
+
+.bankDetailSelectContainer {
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 10px 15px;
+    border: 0.5px solid var(--prColor);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--prColor);
+    font-size: var(--fontSize);
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 2px 3px 9px #00000029;
+}
+
+.bankDetailSelectIcon {
+    margin: 0 10px 0 0;
+    color: var(--secColor);
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bankDetailSelectContainer p {
+    flex: 1;
+    white-space: nowrap;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bankDetailSelectDropDownIcon {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bankDetailSelectDropDownIcon:hover {
+    background-color: var(--thirdColor);
+}
+
+
+
+.bankDetailOptionOuterContainer {
+    width: inherit;
+    padding: 10px;
+    max-height: 250px;
+    position: absolute;
+    top: 52.5px;
+    left: 0px;
+    background-color: var(--lightGreyColor);
+    border: 0.5px solid var(--prColor);
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.bankDetailOptionContainer {
+    width: inherit;
+    max-height: 174px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: var(--whiteColor);
+    border-radius: 10px;
+    color: var(--prColor);
+    font-size: var(--fontSize);
+    font-weight: 500;
+    border: 0.5px solid var(--prColor);
+
+}
+
+.bankDetailOptionSearchBoxContainer {
+    width: 100%;
+}
+
+.bankDetailOptionSearchBox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    padding: 7px 10px;
+    position: sticky;
+    display: block;
+    font-size: var(--fontSize);
+    outline: none;
+    color: var(--prColor);
+    border-radius: 8px;
+    border: 1px solid var(--secColor);
+    box-shadow: 1px 1px 5px 1px var(--shadowColor) inset;
+}
+
+.bankDetailOptionSearchBox::placeholder {
+    color: var(--prColor);
+    opacity: 0.7;
+}
+
+.bankDetailOptionContainer::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--thirdColor);
+}
+
+.bankDetailOptionContainer::-webkit-scrollbar-thumb {
+    background-color: var(--prColor);
+    border-radius: 20px;
+}
+
+.bankDetailOptionSelector {
+    padding: 5px;
+    color: var(--prColor);
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    border-bottom: 0.5px solid var(--prColor);
+}
+
+.bankDetailOptionSelector:first-child {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.bankDetailOptionSelector:last-child {
+    border-radius: 0px 0px 10px 10px;
+    border-bottom: none;
+}
+
+.bankDetailOptionSelector:hover {
+    background-color: var(--thirdColor);
+}
+
+.successBorder {
+    border: 0.5px solid var(--secColor);
+}
+
+.errorBorder {
+    border: 0.5px solid var(--redColor);
+}
+
+.refreshBtnColor {
+    color: var(--orangeColor);
+}
+
+.errorColor {
+    color: var(--redColor);
+}
+
+.disabledField {
+    background-color: var(--thirdColor);
+    cursor: auto;
+}
+
+.opened {
+    transform: rotate(180deg);
+    transition: all 0.1s ease-in;
+}
+
+@media screen and (max-width: 875px) {
+    #bankDetailSearchContainer h1 {
+        margin: 0 0 20px 0;
+    }
+
+    .bankDetailSelectContainer {
+        margin: 0 0 15px 0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.160);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #bankDetailSearchContainer {
+        padding: 20px 10px
+    }
+
+    #bankDetailSearchContainer h1 {
+        font-size: 28px;
+    }
+
+    #bankDetailSearchContainer h1 span::after {
+        height: 3px;
+        left: -3px;
+    }
+}

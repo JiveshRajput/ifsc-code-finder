@@ -1,0 +1,74 @@
+.contactFormContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactFormDirectChilds {
+    padding: 10px;
+    flex: 1 1 ;
+}
+
+.contactFormLeftSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactFormLeftSide img {
+    width: 100%;
+}
+
+.contactFormRightSide h1 {
+    font-size: var(--titleHeadingSize);
+    color: var(--prColor);
+}
+
+.contactUsForm {
+    margin: 20px 0px;
+}
+
+.contactUsForm input,
+.contactUsForm textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--lightGreyColor);
+    display: block;
+    font-size: var(--fontSize);
+    margin: 0px 0px 10px 0px;
+}
+
+.contactUsForm textarea {
+    resize: none;
+    height: 130px;
+}
+
+.contactUsForm input[type='submit'] {
+    background-color: var(--secColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    transition: all 0.1s ease-in 0s;
+}
+.contactUsForm input[type='submit']:hover, 
+.contactUsForm input[type='submit']:focus, 
+.contactUsForm input[type='submit']:active {
+    background-color: var(--secDarkColor);
+}
+
+@media screen and (max-width: 785px) {
+    .contactFormDirectChilds {
+        flex: 1 1 100%;
+    }
+
+    .contactFormLeftSide img {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .contactFormRightSide h1,
+    .contactFormRightSide p {
+        text-align: center;
+    }
+}

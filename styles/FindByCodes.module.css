@@ -1,0 +1,78 @@
+.findByCodeContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.findByCodeSubContainer {
+    padding: 10px;
+}
+
+#findByCodeImgContainer {
+    display: flex;
+    align-items: center;
+}
+
+#findByCodeImgContainer img {
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    width: 160px;
+    height: auto;
+}
+
+#findByIfscCodeContainer {
+    width: 100%;
+    flex: 1 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#findByIfscCodeContainer h1 {
+    color: var(--prColor);
+    font-size: var(--titleHeadingSize);
+}
+
+#findByIfscCodeContainer p {
+    margin: 0 0 30px 0;
+}
+
+.findByCodeSearchForm {
+    width: 100%;
+    display: flex;
+}
+
+.findByCodeFormInputField {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: none;
+    background-color: var(--lightGreyColor);
+    display: block;
+    font-size: var(--fontSize);
+    resize: none;
+}
+
+#findByCodeFormBtn {
+    width: 125px;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--secColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    transition: all 0.1s ease-in 0s;
+}
+
+#findByCodeFormBtn:hover,
+#findByCodeFormBtn:focus,
+#findByCodeFormBtn:active {
+    background-color: var(--secDarkColor);
+}
+
+@media screen and (max-width: 600px) {
+    #findByCodeImgContainer {
+        width: 100%;
+    }
+
+}

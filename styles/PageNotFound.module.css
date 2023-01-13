@@ -1,0 +1,38 @@
+.pageNotFoundContainer {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.pageNotFoundImg {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 30px auto;
+}
+
+.pageNotFoundContainer h1 {
+    color: var(--prColor);
+    font-size: var(--titleHeadingSize);
+}
+
+.pageNotFoundContainer p {
+    margin: 0 0 30px 0;
+}
+
+
+#pageNotFoundBtn {
+    margin: 0px auto;
+}
+
+#pageNotFoundBtn:hover {
+    background-color: var(--secDarkColor);
+}
+
+@media screen and (max-width: 600px) {
+    .pageNotFoundImg {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+}

@@ -1,0 +1,121 @@
+.homeFullWithContainer {
+    width: 100%;
+    min-height: calc(100vh - 66px);
+    padding: 55px 70px;
+    position: relative;
+    background-image: url('../assets/images/backgroundImages/debitCard.webp'), url('../assets/images/backgroundImages/bank.webp');
+    background-repeat: no-repeat;
+    background-size: 12%, 22%;
+    background-position: right 10px, left bottom;
+}
+
+.homeContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homeSubContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* LEFT SIDE CONTAINER */
+
+.homeLeftSideContainer {
+    flex: 1 1 54%;
+}
+
+#homeHeading {
+    font-size: var(--headSize);
+    color: var(--prColor);
+}
+
+#homeHeading span {
+    color: var(--secColor);
+}
+
+#homeSubHeading {
+    max-width: 330px;
+    margin: 0 0 50px 0;
+    font-size: var(--fontSize);
+    font-weight: 500;
+    color: var(--blackColor);
+}
+
+#homeBannerBtn {
+    background-color: var(--prColor);
+    width: 170px;
+}
+
+#homeBannerBtn:hover {
+    background-color: var(--prDarkColor);
+    width: 172px;
+}
+
+/* RIGHT SIDE CONTAINER */
+.homeRightSideContainer {
+    flex: 1 1 46%;
+}
+
+@media screen and (max-width: 946px) {
+    .homeFullWithContainer {
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .homeSubContainer {
+        flex: 1 1 100%;
+    }
+
+    .homeLeftSideContainer {
+        text-align: center;
+    }
+
+    #homeSubHeading {
+        margin: 0 auto 25px auto;
+        max-width: 500px;
+        display: block;
+        text-align: center;
+    }
+
+    #homeBannerBtn {
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    .homeRightSideContainer {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .homeFullWithContainer {
+        padding: 10px 15px;
+        background-size: 25%, 35%;
+    }
+
+    .homeSubContainer {
+        padding: 15px 10px;
+    }
+
+    #homeBannerBtn {
+        width: 150px;
+    }
+
+    #homeBannerBtn:hover {
+        width: 153px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .homeFullWithContainer {
+        background-size: 25%, 50%;
+    }
+
+    .homeSubContainer {
+        padding: 10px 0px;
+    }
+}
