@@ -59,7 +59,7 @@ export async function getServerSideProps(context) {
   try {
     if (bankNameSlug && stateNameSlug) {
       let res = await axiosFetchBankDataInstance({
-        url: "api/bank-name/state/city/branch",
+        url: "api/get-branch",
         data: {
           BANK: bankValue,
           STATE: stateValue,
@@ -70,7 +70,6 @@ export async function getServerSideProps(context) {
       searchIfscDetails.bank = res.data.requestBody.BANK;
       searchIfscDetails.state = res.data.requestBody.STATE;
       searchIfscDetails.district = res.data.requestBody.CITY;
-      console.log(res)
     }
   } catch (err) {
     console.log(`${err.message}\nNavigating to home page.`);

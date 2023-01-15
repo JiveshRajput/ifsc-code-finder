@@ -27,7 +27,6 @@ function Contact() {
     }).then((res) => {
       setFormDetail({ userName: '', userMail: '', userMessage: '' })
       alert(res.data.status);
-      console.log(res.data);
     }).catch((err) => {
       alert(err.message);
     }).finally(() => {

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const axiosFetchBankDataInstance = axios.create({
     method: 'POST',
-    baseURL: 'https://findbankifsccode.onrender.com'
+    baseURL: process.env.API_REQUEST_URL
 })
 
 export default axiosFetchBankDataInstance;

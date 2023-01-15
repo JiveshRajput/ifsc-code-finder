@@ -56,14 +56,13 @@ export async function getServerSideProps(context) {
   try {
     if (bankNameSlug) {
       let res = await axiosFetchBankDataInstance({
-        url: "api/bank-name/get-states",
+        url: "api/get-states",
         data: {
           BANK: bankValue
         }
       })
       ifscFetchedDetails.stateList = res.data.data;
       searchIfscDetails.bank = res.data.requestBody.BANK;
-      console.log(res)
     }
   } catch (err) {
     console.log(`${err.message}\nNavigating to home page.`);

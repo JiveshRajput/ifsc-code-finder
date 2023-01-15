@@ -57,7 +57,7 @@ export async function getServerSideProps(context) {
   try {
     if (bankNameSlug && stateNameSlug) {
       let res = await axiosFetchBankDataInstance({
-        url: "api/bank-name/state/city",
+        url: "api/get-city",
         data: {
           BANK: bankValue,
           STATE: stateValue,

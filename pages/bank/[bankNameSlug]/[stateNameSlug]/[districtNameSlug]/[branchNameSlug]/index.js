@@ -56,7 +56,7 @@ export async function getServerSideProps(context) {
     let isError = false;
     try {
         const res = await axiosFetchBankDataInstance({
-            url: "api/bank-name/state/city/branch/bank",
+            url: "api/get-bank",
             data: {
                 BANK: capsBankName,
                 STATE: capsStateName,

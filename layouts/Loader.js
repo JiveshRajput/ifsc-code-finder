@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { setLoadingState } from '../middlewares/reduxStore/ToggleStateSlice'
+import { useDispatch, useSelector } from 'react-redux';
 
 function Loader() {
-  const [isLoading, setIsLoading] = useState(false)
+  const isLoading = useSelector(state => state.toggleState.isLoading)
   const router = useRouter();
+  const dispatch = useDispatch();
+
   function startLoading() {
-    setIsLoading(true)
+    dispatch(setLoadingState(true));
   }
+
   function stopLoading() {
-    setIsLoading(false)
+    dispatch(setLoadingState(false));
   }
 
   useEffect(() => {
