@@ -5,7 +5,7 @@ import Footer from '../layouts/Footer'
 import reduxStore from '../middlewares/reduxStore/ReduxStore'
 import '../styles/Globals.css'
 import '../styles/BankDetailSearchForm.css'
-import '../styles/Fonts.css'
+// import '../styles/Fonts.css'
 
 export default function App({ Component, pageProps }) {
   return (
