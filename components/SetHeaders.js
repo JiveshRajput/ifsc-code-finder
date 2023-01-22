@@ -8,9 +8,11 @@ function SetHeaders({ title, description, url }) {
                 <title>{title || 'IFSC Code Finder Title'}</title>
                 <meta name="description" content={description || 'IFSC Code Finder Description'} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#013DB9" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="apple-touch-icon" href="/logo192.png" />
                 <link rel="manifest" href="/manifest.json" />
+                <link rel="canonical" href="https://ifsccodefinder.com/" />
                 <meta property="og:title" content={title || 'IFSC Code Finder Title'} />
                 <meta property="og:description" content={description || 'IFSC Code Finder Description'} />
                 <meta property="og:url" content={url ? `https://ifsccodefinder.com${url}` : "https://ifsccodefinder.com"} />

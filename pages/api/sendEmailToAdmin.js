@@ -1,6 +1,5 @@
 import nodemailer from "nodemailer";
 import catchApiErrors from "../../utils/catchApiErrors";
-import AbstractApplicationError from "../../utils/AbstractApplicationError";
 
 const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 	const query = {
@@ -16,7 +15,6 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 			pass: "gurcpgonoliiczad",
 		},
 		tls: {
-			// do not fail on invalid certs
 			rejectUnauthorized: false,
 		},
 	});
@@ -25,7 +23,8 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 		from: `${query.Email}`,
 		to: "tm8683248@gmail.com",
 		subject: `${query.Message}`,
-		text: `User Name  : ${query.Name}
+		text: `Message came from IFSC Code Finder:-
+			   User Name  : ${query.Name}
                User Email : ${query.Email}
                User Message : ${query.Message}`,
 	};
@@ -38,5 +37,4 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 		});
 	});
 });
-
 export default sendEmailtoAdmin;

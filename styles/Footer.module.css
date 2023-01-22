@@ -21,6 +21,7 @@
 #footerContainer1 img {
     margin: 0px auto;
     height: 100px;
+    width: auto;
     display: block;
     text-align: center;
 

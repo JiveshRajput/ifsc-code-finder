@@ -11,7 +11,7 @@ function Footer() {
       <footer id={styles.footer}>
         <div id={styles.footerTopContainer}>
           <div className={styles.footerContainer} id={styles.footerContainer1}>
-            <Image src={logo} alt="logo" width={100} />
+            <Image src={logo} alt="logo" heigth={100} />
           </div>
           <div className={styles.footerContainer} id={styles.footerContainer2}>
             <h1>IFSC Code Finder</h1>
