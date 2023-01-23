@@ -7,12 +7,11 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 		Email: req.body.Email,
 		Message: req.body.Message,
 	};
-
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
-			user: "nomanfortesting@gmail.com",
-			pass: "gurcpgonoliiczad",
+			user: process.env.HOST_EMAIL,
+			pass: process.env.HOST_PASSWORD,
 		},
 		tls: {
 			rejectUnauthorized: false,
@@ -21,7 +20,7 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 
 	const mailOptions = {
 		from: `${query.Email}`,
-		to: "tm8683248@gmail.com",
+		to: process.env.ADMIN_EMAIL,
 		subject: `${query.Message}`,
 		text: `Message came from IFSC Code Finder:-
 			   User Name  : ${query.Name}
@@ -30,7 +29,7 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
-		console.log("Email Sent :" + info);
+		console.log("Email Sent :" + JSON.stringify(info));
 		res.status(200).json({
 			status: "Mail Send Successfully",
 			requestBody: query,

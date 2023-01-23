@@ -56,7 +56,7 @@ function About() {
           </div>
           <div id='whoWeAreRightContainer' className={styles.detailRightSectionContainer}>
             <h1 className='headingStyle'>Our Goal</h1>
-            <p>{`It gives us great pleasure to present to you <website name>! A place where you can very easily find IFSC (India Financial System Code) code. The websites currently lists around 1 lac bank branches of around 150 banks in India.`}</p>
+            <p>It gives us great pleasure to present to you &lt;website name&gt;! A place where you can very easily find IFSC (India Financial System Code) code. The websites currently lists around 1 lac bank branches of around 150 banks in India.</p>
           </div>
         </div>
         {/* our mission section */}
@@ -66,7 +66,7 @@ function About() {
           </div>
           <div id={styles.ourMissionSectionRightContainer} className={styles.detailRightSectionContainer}>
             <h1 className='headingStyle'>Our Mission<span></span></h1>
-            <p>{`It gives us great pleasure to present to you <website name>! A place where you can very easily find IFSC (India Financial System Code) code. The websites currently lists around 1 lac bank branches of around 150 banks in India.`}</p>
+            <p>It gives us great pleasure to present to you &lt;website name&gt;! A place where you can very easily find IFSC (India Financial System Code) code. The websites currently lists around 1 lac bank branches of around 150 banks in India.</p>
           </div>
         </div>
       </div>

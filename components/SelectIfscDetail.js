@@ -56,8 +56,8 @@ function SelectIfscDetail({ fetchedDataFromServer }) {
             </div>
             <div className="bankDetailOptionContainer">
               {searchedValue.bank ?
-                bankList.filter((name) => name.toLowerCase().includes(searchedValue.bank.toLowerCase())).map((name, ind) => <Link href={`/bank/${slugConverter(name)}`} key={ind} className='bankDetailOptionSelector'>● {name}</Link>) :
-                bankList.map((name, ind) => <Link href={`/bank/${slugConverter(name)}`} key={ind} className='bankDetailOptionSelector'>● {name}</Link>)
+                bankList.filter((name) => name.toLowerCase().includes(searchedValue.bank.toLowerCase())).map((name, ind) => <Link href={`/bank/${slugConverter(name)}`} key={ind} className='bankDetailOptionSelector'>{`● ${name}`}</Link>) :
+                bankList.map((name, ind) => <Link href={`/bank/${slugConverter(name)}`} key={ind} className='bankDetailOptionSelector'>{`● ${name}`}</Link>)
               }
             </div>
           </div>}
