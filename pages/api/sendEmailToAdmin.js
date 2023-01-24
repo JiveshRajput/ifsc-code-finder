@@ -7,6 +7,12 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 		Email: req.body.Email,
 		Message: req.body.Message,
 	};
+
+	res.status(200).json({
+		status: "Mail Send Successfully",
+		requestBody: query,
+	});
+
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
@@ -29,11 +35,7 @@ const sendEmailtoAdmin = catchApiErrors(async (req, res) => {
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
-		console.log("Email Sent :" + JSON.stringify(info));
-		res.status(200).json({
-			status: "Mail Send Successfully",
-			requestBody: query,
-		});
+		console.log("Email Sent");
 	});
 });
 export default sendEmailtoAdmin;

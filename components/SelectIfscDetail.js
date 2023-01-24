@@ -18,12 +18,6 @@ function SelectIfscDetail({ fetchedDataFromServer }) {
   const [showBranchOption, setShowBranchOption] = useState(false);
   const [searchedValue, setSearchedValues] = useState({ bank: '', state: '', district: '', branch: '' });
 
-  if (isError) {
-    alert('Something went wrong.\nPlease try again.');
-    router.push('/');
-    return;
-  }
-
   function navToBankOption() {
     router.push(`/`);
   }
@@ -34,6 +28,13 @@ function SelectIfscDetail({ fetchedDataFromServer }) {
   function navToDistrictOption() {
     router.push(`/bank/${bankNameSlug}/${stateNameSlug}`);
   }
+
+  useEffect(() => { 
+    if (isError) {
+      router.push('/');
+      alert('Something went wrong.\nPlease try again.');
+    }
+  }, [isError])
 
   useEffect(() => {
     bankDetailNameWidth.current = document.querySelector('.bankDetailSelectContainer p').offsetWidth;

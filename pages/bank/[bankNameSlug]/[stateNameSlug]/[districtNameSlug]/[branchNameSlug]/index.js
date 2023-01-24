@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 import SetHeaders from '../../../../../../components/SetHeaders'
@@ -16,11 +16,12 @@ function BranchDetailRoute({ fetchedFullDataDetails, isError }) {
     const districtname = nameConverter(districtNameSlug);
     const branchname = nameConverter(branchNameSlug);
 
-    if (isError) {
-    alert('Something went wrong.\nPlease try again.');
-    router.push('/');
-    return;
-    }
+    useEffect(() => {
+        if (isError) {
+            router.push('/');
+            alert('Something went wrong.\nPlease try again.');
+        }
+    }, [isError])
 
     return (
         <>

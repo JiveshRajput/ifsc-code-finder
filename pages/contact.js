@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from "next/router"
 import SetHeaders from "../components/SetHeaders"
-import { useSelector, useDispatch } from 'react-redux';
-import { setLoadingState } from '../middlewares/reduxStore/ToggleStateSlice'
+import { useSelector } from 'react-redux';
 import contactUs from '../assets/images/icons/contactUs.png'
 import axiosFetchBankDataInstance from '../middlewares/axiosInstance/AxiosInstance';
 import styles from '../styles/Contact.module.css'
@@ -11,12 +10,10 @@ import styles from '../styles/Contact.module.css'
 function Contact() {
   const { websiteName } = useSelector(st => st.websiteDetails)
   const router = useRouter();
-  const dispatch = useDispatch();
   const [formDetail, setFormDetail] = useState({ userName: '', userMail: '', userMessage: '' })
 
   function submitForm(e) {
     e.preventDefault();
-    dispatch(setLoadingState(true));
     axiosFetchBankDataInstance({
       url: "api/sendEmailToAdmin",
       data: {
@@ -29,9 +26,7 @@ function Contact() {
       alert(res.data.status);
     }).catch((err) => {
       alert(err.message);
-    }).finally(() => {
-      dispatch(setLoadingState(false));
-    });
+    })
   }
 
   return (

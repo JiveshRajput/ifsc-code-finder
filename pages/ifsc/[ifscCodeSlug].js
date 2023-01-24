@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import SetHeaders from '../../components/SetHeaders';
 import axiosFetchBankDataInstance from '../../middlewares/axiosInstance/AxiosInstance';
 import IfscDetailTable from '../../components/IfscDetailTable';
+import { useEffect } from 'react';
 
 function IfscShowDetailPage({ fetchedFullDataDetails, isError }) {
     const router = useRouter();
@@ -12,11 +13,12 @@ function IfscShowDetailPage({ fetchedFullDataDetails, isError }) {
     const { IFSC, MICR, BANK, BRANCH, ADDRESS, STATE, CITY, DISTRICT } = fetchedFullDataDetails;
     const { websiteName } = useSelector(st => st.websiteDetails)
 
-    if (isError) {
-        alert('Something went wrong.\nPlease try again.');
-        router.push('/');
-        return;
-    }
+    useEffect(() => {
+        if (isError) {
+            router.push('/');
+            alert('Something went wrong.\nPlease try again.');
+        }
+    }, [isError])
 
     return (
         <>

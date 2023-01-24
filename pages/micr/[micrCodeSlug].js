@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import axiosFetchBankDataInstance from '../../middlewares/axiosInstance/AxiosInstance';
 import IfscDetailTable from '../../components/IfscDetailTable';
 import SetHeaders from '../../components/SetHeaders';
+import { useEffect } from 'react';
 
 function MicrShowDetailPage({ fetchedFullDataDetails, isError }) {
     const router = useRouter();
@@ -11,11 +12,12 @@ function MicrShowDetailPage({ fetchedFullDataDetails, isError }) {
     const { micrCodeSlug } = router.query;
     const { IFSC, MICR, BANK, BRANCH, ADDRESS, STATE, CITY, DISTRICT } = fetchedFullDataDetails;
 
-    if (isError) {
-        alert('Something went wrong.\nPlease try again.');
-        router.push('/');
-        return;
-    }
+    useEffect(() => {
+        if (isError) {
+            router.push('/');
+            alert('Something went wrong.\nPlease try again.');
+        }
+    }, [isError])
 
     return (
         <>
